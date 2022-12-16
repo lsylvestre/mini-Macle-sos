@@ -1,0 +1,20 @@
+input time = 0 -> ?time + 1
+
+input a = true -> if (?time == 0) or
+                     (?time == 1) or
+                     (?time == 3)
+                  then true
+                  else false
+input b = true -> if (?time == 0) or
+                     (?time == 1) or
+                     (?time == 6)
+                  then true
+                  else false
+
+input c = true
+input d = true
+input e = true
+
+input r = true -> false
+
+output o

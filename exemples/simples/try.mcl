@@ -1,0 +1,7 @@
+output o
+;;
+
+let z = try 
+          try raise X with Y -> 4 
+         with X -> 5
+in do (next o) = z in ()

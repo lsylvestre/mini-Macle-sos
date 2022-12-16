@@ -1,0 +1,13 @@
+output o, debug
+input i
+
+let fact = fun a ->
+  let rec aux acc n =
+    do (next debug) = acc in
+    if n <= 1 then acc else aux (acc*n) (n-1)
+  in aux 1 a
+;;
+
+let x = fact ?i in
+do (next o) = x in
+()

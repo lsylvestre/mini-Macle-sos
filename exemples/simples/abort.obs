@@ -1,0 +1,4 @@
+input count = 0 -> ?count + 1
+
+input i = false -> if ?count == 5 then true else false
+output o

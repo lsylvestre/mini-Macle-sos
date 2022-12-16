@@ -1,0 +1,14 @@
+output o, t1, t2
+input i, j
+
+let fact = fun a tmp ->
+  let rec aux acc n =
+    do (next tmp) = acc in 
+    if n <= 1 then acc else aux (acc*n) (n-1)
+  in aux 1 a
+;;
+
+let x = fact ?i t1 
+and y = fact ?j t2 in
+do (next o) = x + y in
+()

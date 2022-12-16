@@ -1,0 +1,7 @@
+input i
+output o
+
+
+abort 
+  let rec f x = do (next o) = x in f (x+1) in f 10
+when ?i

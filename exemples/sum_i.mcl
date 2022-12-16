@@ -1,0 +1,7 @@
+output o = 0
+input i
+
+let rec sum i o = 
+  do (next o) = ~o+?i in sum i o 
+in
+immediate sum i o

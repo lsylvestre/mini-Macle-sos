@@ -1,0 +1,45 @@
+./ast.cmo : \
+    prelude.cmo
+./ast.cmx : \
+    prelude.cmx
+./interp.cmo : \
+    prelude.cmo \
+    ast.cmo
+./interp.cmx : \
+    prelude.cmx \
+    ast.cmx
+./main.cmo : \
+    prelude.cmo \
+    parser.cmi \
+    interp.cmo
+./main.cmx : \
+    prelude.cmx \
+    parser.cmx \
+    interp.cmx
+./parser.cmo : \
+    prelude.cmo \
+    interp.cmo \
+    ast.cmo \
+    ./parser.cmi
+./parser.cmx : \
+    prelude.cmx \
+    interp.cmx \
+    ast.cmx \
+    ./parser.cmi
+./parser.cmi : \
+    prelude.cmo \
+    ast.cmo
+./prelude.cmo :
+./prelude.cmx :
+parser.cmo : \
+    prelude.cmo \
+    interp.cmo \
+    ast.cmo \
+    parser.cmi
+parser.cmx : \
+    prelude.cmx \
+    interp.cmx \
+    ast.cmx \
+    parser.cmi
+parser.cmi :
+parser.ml parser.mli: ast.cmo interp.cmo prelude.cmo

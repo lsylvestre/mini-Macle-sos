@@ -1,0 +1,13 @@
+output o = 0
+
+local <x/y> = 0 in
+
+let _ = let rec f _ =
+          do (next x) = ~x + 1 in f ()
+        in immediate f ()
+
+and _ = let rec f _ =
+          do (next o) = ~x + ~o in f ()
+        in immediate f ()
+
+in ()

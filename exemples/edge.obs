@@ -1,0 +1,5 @@
+input count = 0 -> ?count + 1
+
+input i = false -> if ?count <= 3 or 
+                      ?count == 7 then true else false
+output o

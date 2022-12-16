@@ -1,0 +1,14 @@
+input i
+output o, result
+
+;;
+
+let rec odd n = 
+  if n <= 0 then false else even (n - 1)
+and even n = 
+  if n <= 0 then true else 
+  do (next o) = n in
+  immediate odd (n - 1) 
+in
+let x = immediate even ?i in
+do (next result) = x in () 

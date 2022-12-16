@@ -1,0 +1,5 @@
+output o = 0
+
+let rec loop _ =
+  do (next o) = ~o+1 in loop ()
+in immediate loop ()

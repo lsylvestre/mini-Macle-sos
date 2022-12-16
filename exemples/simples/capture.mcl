@@ -1,0 +1,14 @@
+output o
+input i
+
+;;
+let rec g x =
+  let rec f y = 
+    z y
+  and h x = 42 
+  in f 17
+and z y = h y
+and h x = 5
+in 
+let u = g 2 in
+do (next o) = u in () 

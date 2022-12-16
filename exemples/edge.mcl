@@ -1,0 +1,14 @@
+input i
+output o = false
+
+(* [edge i o] émet true sur [o] 
+   à chaque front montant sur [i] *)
+
+let edge i o =
+  let rec f pre_i =
+    do (next o) = ?i && (not pre_i) in f (?i)
+  in 
+  immediate f ?i
+;;
+
+edge i o

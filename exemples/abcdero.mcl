@@ -1,0 +1,21 @@
+input a, b, c, d, e, r
+output o = false
+
+let abcdero = fun a b c d e r o ->
+  let rec restart _ = 
+    immediate loop false false false false false
+  and loop va vb vc vd ve = 
+    do (next o) = false in
+    if ?r then restart () else
+      let va = va or ?a in
+      let vb = vb or ?b in
+      let vc = vc or ?c in
+      let vd = vd or ?d in
+      let ve = ve or ?e in
+      if va && vb && vc && vd && ve then
+        do (next o) = true in restart ()
+      else loop va vb vc vd ve
+  in
+  immediate restart () ;;
+
+abcdero a b c d e r o
